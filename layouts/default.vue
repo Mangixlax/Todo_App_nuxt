@@ -3,9 +3,9 @@
     <navbar/>
     <main>
       <div class="container">
-        <nuxt />
+        <nuxt class="h-100" />
       </div>
-    </main>    
+    </main>   
   </div>
 </template>
 
