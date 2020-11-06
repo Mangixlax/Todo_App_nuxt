@@ -1,5 +1,5 @@
 <template>
-	<div id="todoApp" class="bg-primary h-100" >
+	<div id="todoApp" class=" bg-primary h-100" >
     <div class="bg-primary">
 
       <div class="row justify-content-center h-100">
@@ -19,7 +19,7 @@
 
         <div class="row  pt-4">
           <div class="col-3 text-right">
-            All Todo : <span id="taskCount"> {{ tasks.length }} </span> 
+            All Todo : <span id="taskCount"> {{this.$store.state.todos.length}} </span> 
           </div>
           <div class="col-1 text-right offset-1">
             <i class="fas fa-exclamation-circle text-primary"></i>
@@ -40,8 +40,7 @@
         <div class="row">
           <div class="container">
             <hr class="mt-3">
-            <Todos
-            :tasks="tasks"
+            <Todos       
             @deleteTask="deleteTask"/>
           </div>         
         </div>
@@ -57,31 +56,28 @@
 </template>
 
 <script>
-	
+	import {mapActions} from 'vuex'
 	export default {
-	  
-	  data () {
-	    return {      
-	      tasks: [], // создаём массив для записи сюда данных о задаче
-	    }
-	  },
-	  methods: { // указываем пользовательские методы для 
-	    addTask(addFormValue) { // метод для добавления задачи
-	      this.tasks.push({
-	       text: addFormValue, 
-	       complete: false,     
-	      }) 
+
+	  methods: {
+      ...mapActions([
+          'addTodo',
+          'deleteTodo'
+        ]),
+       // указываем пользовательские методы для 
+	    addTask(todo) { // метод для добавления задачи
+	       this.addTodo(todo)
 	    },
 	    deleteTask(index){
-	      this.$delete(this.tasks, index)
+	      this.deleteTodo(index)
 	    },
 	  },
 	  computed: {
 	    getIncompleteLength() { 
-	      return this.tasks.filter((task) => task.complete !== true).length
+	      return this.$store.state.todos.filter((task) => task.complete !== true).length
 	    },
 	    getCompleteLength() {
-	      return this.tasks.length - this.getIncompleteLength
+	      return this.$store.state.todos.length - this.getIncompleteLength
 	  },
 	  },
 	  watch: {

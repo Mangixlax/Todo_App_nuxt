@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="">
     <navbar/>
-    <main>
-      <div class="container">
-        <nuxt class="h-100" />
+    
+      <div class="h-100">
+        <nuxt />
       </div>
-    </main>   
+       
   </div>
 </template>
 

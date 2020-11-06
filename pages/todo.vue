@@ -1,3 +1,3 @@
-<template class="h-100">
+<template>
 	<todo/>
 </template>

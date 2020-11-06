@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<div class="container">
 		<h1>User {{$route.params.id}}</h1>
-	</section>
+	</div>
 </template>

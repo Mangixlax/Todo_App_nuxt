@@ -1,8 +1,10 @@
-<template>
-  <div class="container">
-     
-    <carousel/>
-  </div>
+<template >
+	<section>
+		<div class="container h-100">    
+		    <carousel/>
+		</div>
+	</section>
+  
 </template>
 
 <script>
