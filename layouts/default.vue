@@ -1,11 +1,7 @@
 <template>
-  <div class="">
+  <div id="_block">
     <navbar/>
-    
-      <div class="h-100">
-        <nuxt />
-      </div>
-       
+    <nuxt/>      
   </div>
 </template>
 

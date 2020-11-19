@@ -1,8 +1,8 @@
 <template>
-	<div id="todoApp" class=" bg-primary h-100" >
+	<div id="_todoApp" class="bg-primary h-100" >
     <div class="bg-primary">
 
-      <div class="row justify-content-center h-100">
+      <div class="container justify-content-center h-100">
         <div class="col-md-12 align-self-center ">
           <h1 class="text-center"><a href="#" class="text-white">ToDo App!</a></h1>
           <h6 class="text-center text-white">Add New TO-DO</h6>
@@ -46,7 +46,7 @@
         </div>
 
       
-      	<NuxtChild/>
+      	
     	  
       </div>
 

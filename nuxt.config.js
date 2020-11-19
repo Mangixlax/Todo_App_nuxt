@@ -15,11 +15,13 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '@/node_modules/bootstrap/dist/css/bootstrap.min.css',
-    '@node_modules/@fortawesome/fontawesome-free/css/all.css'
+    '@node_modules/@fortawesome/fontawesome-free/css/all.css',
+    '@assets/scss/main'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    "@plugins/slider-swiper.js"
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -32,6 +34,7 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     'bootstrap-vue/nuxt',
+    '@nuxtjs/style-resources'
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

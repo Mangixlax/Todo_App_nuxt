@@ -2,13 +2,16 @@
 	<section>
 		<div class="container h-100">    
 		    <carousel/>
+			<slider-swiper/>
 		</div>
 	</section>
   
 </template>
 
 <script>
-export default {}
+import sliderSwiper from '../components/slider-swiper/slider-swiper.vue'
+export default {
+  components: { sliderSwiper },}
 </script>
 
 <style>

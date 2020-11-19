@@ -1,6 +1,6 @@
 <template>
 	<ol class="list-group" id="task_list">              
-		<li v-for="(task, index) in this.$store.state.todos" class="list-group-item border-0 mt-0">
+		<li v-for="(task, index) in this.$store.state.todos" :key="index" class="list-group-item border-0 mt-0">
 		<div class="row m-0 mb-4">
 
 		  <div class="col-md-10 col-sm-9 pl-2">
